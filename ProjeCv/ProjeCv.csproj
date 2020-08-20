@@ -148,6 +148,32 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="startbootstrap-resume-gh-pages\assets\img\favicon.ico" />
+    <Content Include="startbootstrap-resume-gh-pages\assets\img\profile.jpg" />
+    <Content Include="startbootstrap-resume-gh-pages\css\styles.css" />
+    <Content Include="startbootstrap-resume-gh-pages\index.html" />
+    <Content Include="startbootstrap-resume-gh-pages\js\scripts.js" />
+    <Content Include="startbootstrap-resume-master\.gitignore" />
+    <Content Include="startbootstrap-resume-master\dist\assets\img\favicon.ico" />
+    <Content Include="startbootstrap-resume-master\dist\assets\img\profile.jpg" />
+    <Content Include="startbootstrap-resume-master\dist\css\styles.css" />
+    <Content Include="startbootstrap-resume-master\dist\index.html" />
+    <Content Include="startbootstrap-resume-master\dist\js\scripts.js" />
+    <Content Include="startbootstrap-resume-master\scripts\build-assets.js" />
+    <Content Include="startbootstrap-resume-master\scripts\build-pug.js" />
+    <Content Include="startbootstrap-resume-master\scripts\build-scripts.js" />
+    <Content Include="startbootstrap-resume-master\scripts\build-scss.js" />
+    <Content Include="startbootstrap-resume-master\scripts\clean.js" />
+    <Content Include="startbootstrap-resume-master\scripts\render-assets.js" />
+    <Content Include="startbootstrap-resume-master\scripts\render-pug.js" />
+    <Content Include="startbootstrap-resume-master\scripts\render-scripts.js" />
+    <Content Include="startbootstrap-resume-master\scripts\render-scss.js" />
+    <Content Include="startbootstrap-resume-master\scripts\sb-watch.js" />
+    <Content Include="startbootstrap-resume-master\scripts\start-debug.js" />
+    <Content Include="startbootstrap-resume-master\scripts\start.js" />
+    <Content Include="startbootstrap-resume-master\src\assets\img\favicon.ico" />
+    <Content Include="startbootstrap-resume-master\src\assets\img\profile.jpg" />
+    <Content Include="startbootstrap-resume-master\src\js\scripts.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -162,6 +188,23 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="startbootstrap-resume-master\.editorconfig" />
+    <Content Include="startbootstrap-resume-master\.travis.yml" />
+    <Content Include="startbootstrap-resume-master\LICENSE" />
+    <Content Include="startbootstrap-resume-master\package-lock.json" />
+    <Content Include="startbootstrap-resume-master\package.json" />
+    <Content Include="startbootstrap-resume-master\README.md" />
+    <Content Include="startbootstrap-resume-master\src\pug\index.pug" />
+    <Content Include="startbootstrap-resume-master\src\scss\components\_icons.scss" />
+    <Content Include="startbootstrap-resume-master\src\scss\components\_sidenav.scss" />
+    <Content Include="startbootstrap-resume-master\src\scss\sections\_resume-section.scss" />
+    <Content Include="startbootstrap-resume-master\src\scss\styles.scss" />
+    <Content Include="startbootstrap-resume-master\src\scss\variables\_colors.scss" />
+    <Content Include="startbootstrap-resume-master\src\scss\variables\_grid.scss" />
+    <Content Include="startbootstrap-resume-master\src\scss\variables\_spacing.scss" />
+    <Content Include="startbootstrap-resume-master\src\scss\variables\_typography.scss" />
+    <Content Include="startbootstrap-resume-master\src\scss\_global.scss" />
+    <Content Include="startbootstrap-resume-master\src\scss\_variables.scss" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
