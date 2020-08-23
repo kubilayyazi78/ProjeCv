@@ -9,5 +9,7 @@ namespace ProjeCv.Models.Class
     {
         public IEnumerable<TblAbout> Deger1 { get; set; }
         public IEnumerable<TblExperience> Deger2 { get; set; }
+
+        public IEnumerable<TblEducation> Deger3 { get; set; }
     }
 }

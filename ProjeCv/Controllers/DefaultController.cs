@@ -19,6 +19,7 @@ namespace ProjeCv.Controllers
             Class1 cs = new Class1();
             cs.Deger1 = db.TblAbout.ToList();
             cs.Deger2 = db.TblExperience.ToList();
+            cs.Deger3 = db.TblEducation.ToList();
 
 
             return View(cs);
