@@ -11,5 +11,11 @@ namespace ProjeCv.Models.Class
         public IEnumerable<TblExperience> Deger2 { get; set; }
 
         public IEnumerable<TblEducation> Deger3 { get; set; }
+
+        public IEnumerable<TblSkills> Deger4 { get; set; }
+
+        public IEnumerable<TblInterests> Deger5 { get; set; }
+
+        public IEnumerable<TblAwards> Deger6 { get; set; }
     }
 }

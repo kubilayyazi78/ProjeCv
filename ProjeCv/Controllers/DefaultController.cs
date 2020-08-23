@@ -21,6 +21,10 @@ namespace ProjeCv.Controllers
             cs.Deger2 = db.TblExperience.ToList();
             cs.Deger3 = db.TblEducation.ToList();
 
+            cs.Deger4 = db.TblSkills.ToList();
+            cs.Deger5 = db.TblInterests.ToList();
+            cs.Deger6 = db.TblAwards.ToList();
+
 
             return View(cs);
 
