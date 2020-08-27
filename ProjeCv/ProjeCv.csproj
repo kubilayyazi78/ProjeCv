@@ -132,6 +132,7 @@
     <Compile Include="Controllers\DeneyimlerController.cs" />
     <Compile Include="Controllers\EgitimlerController.cs" />
     <Compile Include="Controllers\HakkimdaController.cs" />
+    <Compile Include="Controllers\HobilerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\YeteneklerController.cs" />
     <Compile Include="Global.asax.cs">
@@ -270,6 +271,7 @@
     <Content Include="Views\Deneyimler\Index.cshtml" />
     <Content Include="Views\Egitimler\Index.cshtml" />
     <Content Include="Views\Yetenekler\Index.cshtml" />
+    <Content Include="Views\Hobiler\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
