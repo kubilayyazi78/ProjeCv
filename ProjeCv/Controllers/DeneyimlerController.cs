@@ -18,5 +18,18 @@ namespace ProjeCv.Controllers
             cs.Deger2 = db.TblExperience.ToList();
             return View(cs);
         }
+        [HttpGet]
+        public ActionResult YeniDeneyim()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult YeniDeneyim(TblExperience p)
+        {
+            db.TblExperience.Add(p);
+            db.SaveChanges();
+            return View();
+        }
     }
 }
