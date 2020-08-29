@@ -29,6 +29,7 @@
                     HAKKIMDA
                 </th>
             </tr>*@
+            <th>GÜNCELLE</th>
         </thead>
         <tbody>
             @foreach (var item in Model.Deger1)
@@ -41,6 +42,7 @@
                 <td>@item.Phone</td>
                 <td>@item.Mail</td>
                 @* <td>@item.About</td>*@
+                <td><a href="/Hakkimda/HakkimdaGuncelle/@item.Id" class="btn btn-warning">Güncelle</a></td>
         </tr>
         }
 

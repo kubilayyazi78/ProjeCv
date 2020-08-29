@@ -31,5 +31,18 @@ namespace ProjeCv.Controllers
             db.SaveChanges();
             return View();
         }
+
+        public ActionResult KonferansSil(int id)
+        {
+
+            var konferans = db.TblAwards.Find(id);
+
+            db.TblAwards.Remove(konferans);
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+
+        }
     }
 }

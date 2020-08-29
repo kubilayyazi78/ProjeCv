@@ -13,6 +13,8 @@
             <th>
                 KONFERANSLAR
             </th>
+            <th>SİL</th>
+            <th>GÜNCELLE</th>
     </thead>
     <tbody>
         @foreach (var item in Model.Deger6)
@@ -20,6 +22,8 @@
             <tr>
                 <th>@item.Id</th>
                 <td>@item.Award</td>
+                <td>@Html.ActionLink("Konferans Sil","KonferansSil",new {id=item.Id},new {@class="btn btn-danger", onclick="return confirm ('Silmek İstiyor Musun ?')" })</td>
+                <td><a href="/Konferanslar/KonferansGuncelle/@item.Id" class="btn btn-success">Güncelle</a></td>
             </tr>
         }
 
