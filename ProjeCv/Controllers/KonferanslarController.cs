@@ -17,5 +17,19 @@ namespace ProjeCv.Controllers
             cs.Deger6 = db.TblAwards.ToList();
             return View(cs);
         }
+
+        [HttpGet]
+        public ActionResult YeniKonferans()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult YeniKonferans(TblAwards p)
+        {
+            db.TblAwards.Add(p);
+            db.SaveChanges();
+            return View();
+        }
     }
 }
