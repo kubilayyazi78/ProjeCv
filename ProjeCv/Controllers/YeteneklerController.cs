@@ -17,5 +17,19 @@ namespace ProjeCv.Controllers
             cs.Deger4 = db.TblSkills.ToList();
             return View(cs);
         }
+
+        [HttpGet]
+        public ActionResult YeniYetenek()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult YeniYetenek(TblSkills p)
+        {
+            db.TblSkills.Add(p);
+            db.SaveChanges();
+            return View(p);
+        }
     }
 }
