@@ -1,4 +1,5 @@
-﻿using ProjeCv.Models.Class;
+﻿using Microsoft.Ajax.Utilities;
+using ProjeCv.Models.Class;
 using ProjeCv.Models.Entity;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,17 @@ namespace ProjeCv.Controllers
             db.TblSkills.Add(p);
             db.SaveChanges();
             return View(p);
+        }
+
+        public ActionResult YetenekSil(int id)
+        {
+            var yetenek = db.TblSkills.Find(id);
+
+            db.TblSkills.Remove(yetenek);
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
         }
     }
 }
