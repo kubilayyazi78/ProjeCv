@@ -22,17 +22,21 @@
             <th>
                 DNO
             </th>
-    </thead>
+            <th>SİL</th>
+            <th>GÜNCELLEME</th>
+</thead>
     <tbody>
         @foreach (var item in Model.Deger3)
         {
-            <tr>
-                <th>@item.Id</th>
-                <td>@item.Title</td>
-                <td>@item.SubTitle</td>
-                <td>@item.Department</td>
-                <td>@item.Gpa</td>
-            </tr>
+        <tr>
+            <th>@item.Id</th>
+            <td>@item.Title</td>
+            <td>@item.SubTitle</td>
+            <td>@item.Department</td>
+            <td>@item.Gpa</td>
+            <td><a href="/Egitimler/EgitimSil/@item.Id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Egitimler/EgitimGuncelle/@item.Id" class="btn btn-success">Güncelle</a></td>
+        </tr>
         }
 
     </tbody>

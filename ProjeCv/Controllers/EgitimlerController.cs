@@ -30,5 +30,16 @@ namespace ProjeCv.Controllers
             db.SaveChanges();
             return View();
         }
+
+        public ActionResult EgitimSil(int id)
+        {
+            var egitim = db.TblEducation.Find(id);
+
+            db.TblEducation.Remove(egitim);
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }
