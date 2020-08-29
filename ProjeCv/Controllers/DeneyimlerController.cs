@@ -31,5 +31,16 @@ namespace ProjeCv.Controllers
             db.SaveChanges();
             return View();
         }
+
+        public ActionResult DeneyimSil (int id)
+        {
+            var deneyim = db.TblExperience.Find(id);
+
+            db.TblExperience.Remove(deneyim);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+
+        }
     }
 }
