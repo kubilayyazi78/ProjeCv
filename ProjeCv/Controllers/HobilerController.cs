@@ -17,5 +17,19 @@ namespace ProjeCv.Controllers
             cs.Deger5 = db.TblInterests.ToList();
             return View(cs);
         }
+
+        [HttpGet]
+        public ActionResult YeniHobi()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult YeniHobi(TblInterests p)
+        {
+            db.TblInterests.Add(p);
+            db.SaveChanges();
+            return View(p);
+        }
     }
 }
