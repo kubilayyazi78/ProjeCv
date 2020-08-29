@@ -17,5 +17,18 @@ namespace ProjeCv.Controllers
             cs.Deger3 = db.TblEducation.ToList();
             return View(cs);
         }
+
+        [HttpGet]
+        public ActionResult YeniEgitim()
+        {
+            return View();
+        }
+
+        public ActionResult YeniEgitim(TblEducation p)
+        {
+            db.TblEducation.Add(p);
+            db.SaveChanges();
+            return View();
+        }
     }
 }
