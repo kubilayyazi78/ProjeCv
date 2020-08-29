@@ -31,5 +31,16 @@ namespace ProjeCv.Controllers
             db.SaveChanges();
             return View(p);
         }
+
+        public ActionResult HobiSil(int id)
+        {
+            var hobi = db.TblInterests.Find(id);
+
+            db.TblInterests.Remove(hobi);
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }
