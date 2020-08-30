@@ -3,6 +3,7 @@ using ProjeCv.Models.Class;
 using ProjeCv.Models.Entity;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -38,6 +39,24 @@ namespace ProjeCv.Controllers
             var yetenek = db.TblSkills.Find(id);
 
             db.TblSkills.Remove(yetenek);
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult YetenekGetir(int id)
+        {
+            var yetenek = db.TblSkills.Find(id);
+
+            return View("YetenekGetir", yetenek);
+        }
+
+        public ActionResult YetenekGuncelle(TblSkills p)
+        {
+            var yetenek = db.TblSkills.Find(p.Id);
+
+            yetenek.Skill = p.Skill;
 
             db.SaveChanges();
 
