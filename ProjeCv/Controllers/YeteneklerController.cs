@@ -7,17 +7,19 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 
 namespace ProjeCv.Controllers
 {
     public class YeteneklerController : Controller
     {
         DbMvcCvEntities db = new DbMvcCvEntities();
-        public ActionResult Index()
+        public ActionResult Index(int sayfa=1)
         {
-            Class1 cs = new Class1();
-            cs.Deger4 = db.TblSkills.ToList();
-            return View(cs);
+            //Class1 cs = new Class1();
+            var degerler = db.TblSkills.ToList().ToPagedList(sayfa,3);
+            return View(degerler);
         }
 
         [HttpGet]
