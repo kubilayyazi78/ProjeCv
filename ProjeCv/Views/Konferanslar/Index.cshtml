@@ -1,9 +1,16 @@
-﻿@model ProjeCv.Models.Class.Class1
+﻿@using ProjeCv.Models.Entity
+@model List<TblAwards>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
-
+@using (Html.BeginForm("Index", "Konferanslar", FormMethod.Get))
+{
+    <p>
+        <b>Aranacak Deger :</b>  @Html.TextBox("p")
+        <input type="submit" value="Ara" />
+    </p>
+}
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -17,12 +24,12 @@
             <th>GÜNCELLE</th>
     </thead>
     <tbody>
-        @foreach (var item in Model.Deger6)
+        @foreach (var item in Model)
         {
             <tr>
                 <th>@item.Id</th>
                 <td>@item.Award</td>
-                <td>@Html.ActionLink("Konferans Sil","KonferansSil",new {id=item.Id},new {@class="btn btn-danger", onclick="return confirm ('Silmek İstiyor Musun ?')" })</td>
+                <td>@Html.ActionLink("Konferans Sil", "KonferansSil", new { id = item.Id }, new { @class = "btn btn-danger", onclick = "return confirm ('Silmek İstiyor Musun ?')" })</td>
                 <td><a href="/Konferanslar/KonferansGetir/@item.Id" class="btn btn-success">Güncelle</a></td>
             </tr>
         }

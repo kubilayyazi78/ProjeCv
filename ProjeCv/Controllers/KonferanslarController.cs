@@ -11,11 +11,22 @@ namespace ProjeCv.Controllers
     public class KonferanslarController : Controller
     {
         DbMvcCvEntities db = new DbMvcCvEntities();
-        public ActionResult Index()
+        public ActionResult Index(string p)
         {
-            Class1 cs = new Class1();
-            cs.Deger6 = db.TblAwards.ToList();
-            return View(cs);
+
+            var degerler = from d in db.TblAwards select d;
+            if (!string.IsNullOrEmpty(p))
+            {
+                degerler = degerler.Where(m => m.Award.Contains(p));
+            }
+
+            return View("Index", degerler.ToList());
+
+           // Class1 cs = new Class1();
+           // cs.Deger6 = db.TblAwards.ToList();
+           // return View(cs);
+
+
         }
 
         [HttpGet]
