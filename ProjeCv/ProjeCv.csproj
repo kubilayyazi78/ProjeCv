@@ -280,6 +280,7 @@
     <Content Include="Views\Hobiler\YeniHobi.cshtml" />
     <Content Include="Views\Konferanslar\YeniKonferans.cshtml" />
     <Content Include="Views\Hakkimda\HakkimdaGetir.cshtml" />
+    <Content Include="Views\Deneyimler\DeneyimGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

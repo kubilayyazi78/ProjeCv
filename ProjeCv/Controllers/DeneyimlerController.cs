@@ -42,5 +42,26 @@ namespace ProjeCv.Controllers
             return RedirectToAction("Index");
 
         }
+
+        public ActionResult DeneyimGetir(int id)
+        {
+            var deneyim = db.TblExperience.Find(id);
+
+            return View("DeneyimGetir", deneyim);
+        }
+
+        public ActionResult DeneyimGuncelle(TblExperience p)
+        {
+            var deneyim = db.TblExperience.Find(p.Id);
+
+            deneyim.Title = p.Title;
+            deneyim.SubTitle = p.SubTitle;
+            deneyim.Date = p.Date;
+            deneyim.Details = p.Details;
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }

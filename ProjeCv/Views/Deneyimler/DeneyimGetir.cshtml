@@ -1,0 +1,27 @@
+﻿@model ProjeCv.Models.Entity.TblExperience
+@{
+    ViewBag.Title = "DeneyimGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("DeneyimGuncelle", "Deneyimler", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(i => i.Id)
+        @Html.TextBoxFor(i => i.Id, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(i => i.Title)
+        @Html.TextBoxFor(i => i.Title, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(i => i.SubTitle)
+        @Html.TextBoxFor(i => i.SubTitle, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(i => i.Date)
+        @Html.TextBoxFor(i => i.Date, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(i => i.Details)
+        @Html.TextAreaFor(i => i.Details, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-primary">Güncelle</button>
+    </div>
+}
