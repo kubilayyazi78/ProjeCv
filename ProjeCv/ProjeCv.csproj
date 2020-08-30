@@ -281,6 +281,7 @@
     <Content Include="Views\Konferanslar\YeniKonferans.cshtml" />
     <Content Include="Views\Hakkimda\HakkimdaGetir.cshtml" />
     <Content Include="Views\Deneyimler\DeneyimGetir.cshtml" />
+    <Content Include="Views\Egitimler\EgitimGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

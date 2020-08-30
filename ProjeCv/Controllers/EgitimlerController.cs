@@ -41,5 +41,27 @@ namespace ProjeCv.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public ActionResult EgitimGetir(int id)
+        {
+            var egitim = db.TblEducation.Find(id);
+
+            return View("EgitimGetir", egitim);
+        }
+
+        public ActionResult EgitimGuncelle(TblEducation p)
+        {
+            var egitim = db.TblEducation.Find(p.Id);
+
+            egitim.Title = p.Title;
+            egitim.SubTitle = p.SubTitle;
+            egitim.Department = p.Department;
+            egitim.Gpa = p.Gpa;
+
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }
