@@ -44,5 +44,23 @@ namespace ProjeCv.Controllers
             return RedirectToAction("Index");
 
         }
+
+        public ActionResult KonferansGetir(int id)
+        {
+            var konferans = db.TblAwards.Find(id);
+
+            return View("KonferansGetir", konferans);
+        }
+
+        public ActionResult KonferansGuncelle(TblAwards p)
+        {
+            var konferans = db.TblAwards.Find(p.Id);
+
+            konferans.Award= p.Award;
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }
