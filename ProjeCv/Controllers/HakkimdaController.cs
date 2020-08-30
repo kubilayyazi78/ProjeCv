@@ -26,5 +26,23 @@ namespace ProjeCv.Controllers
 
             return View("HakkimdaGetir", hakkimda);
         }
+
+
+        public ActionResult HakkimdaGuncelle(TblAbout p)
+        {
+            var hakkimda = db.TblAbout.Find(p.Id);
+
+           // hakkimda.Id = p.Id;
+            hakkimda.Name = p.Name;
+            hakkimda.Surname = p.Surname;
+            hakkimda.Phone = p.Phone;
+            hakkimda.Address = p.Address;
+            hakkimda.Mail = p.Mail;
+            hakkimda.About = p.About;
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }

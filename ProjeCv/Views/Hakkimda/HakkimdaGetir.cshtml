@@ -27,8 +27,11 @@
         @Html.LabelFor(i => i.Mail)
         @Html.TextBoxFor(i => i.Mail, new { @class = "form-control" })
         <br />
+        @Html.LabelFor(i => i.About)
+        @Html.TextAreaFor(i => i.About, new { @class = "form-control" })
+        <br />
         <button class="btn btn-primary">Güncelle</button>
     </div>
 
-    
+
 }
