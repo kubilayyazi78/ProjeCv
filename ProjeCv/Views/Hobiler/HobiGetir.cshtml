@@ -1,0 +1,19 @@
+﻿@model ProjeCv.Models.Entity.TblInterests
+@{
+    ViewBag.Title = "HobiGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("HobiGuncelle", "Hobiler", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(i => i.Id)
+        @Html.TextBoxFor(i => i.Id, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(i => i.Interest)
+        @Html.TextBoxFor(i => i.Interest, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-primary">Güncelle</button>
+    </div>
+}
+

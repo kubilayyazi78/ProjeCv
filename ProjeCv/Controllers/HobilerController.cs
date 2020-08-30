@@ -42,5 +42,23 @@ namespace ProjeCv.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public ActionResult HobiGetir(int id)
+        {
+            var hobi = db.TblInterests.Find(id);
+
+            return View("HobiGetir", hobi);
+        }
+
+        public ActionResult HobiGuncelle(TblInterests p)
+        {
+            var hobi = db.TblInterests.Find(p.Id);
+
+            hobi.Interest = p.Interest;
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }
