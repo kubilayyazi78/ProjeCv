@@ -1,0 +1,34 @@
+﻿@model ProjeCv.Models.Entity.TblAbout
+@{
+    ViewBag.Title = "HakkimdaGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>HakkimdaGetir</h2>
+
+@using (Html.BeginForm("HakkimdaGuncelle", "Hakkimda", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(i => i.Id)
+        @Html.TextBoxFor(i => i.Id, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(i => i.Name)
+        @Html.TextBoxFor(i => i.Name, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(i => i.Surname)
+        @Html.TextBoxFor(i => i.Surname, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(i => i.Address)
+        @Html.TextBoxFor(i => i.Address, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(i => i.Phone)
+        @Html.TextBoxFor(i => i.Phone, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(i => i.Mail)
+        @Html.TextBoxFor(i => i.Mail, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-primary">Güncelle</button>
+    </div>
+
+    
+}

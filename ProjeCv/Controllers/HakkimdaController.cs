@@ -19,5 +19,12 @@ namespace ProjeCv.Controllers
             cs.Deger1 = db.TblAbout.ToList();
             return View(cs);
         }
+
+        public ActionResult HakkimdaGetir(int id)
+        {
+            var hakkimda = db.TblAbout.Find(id);
+
+            return View("HakkimdaGetir", hakkimda);
+        }
     }
 }
